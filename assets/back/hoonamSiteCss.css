@@ -1,0 +1,738 @@
+body {
+      font-family: 'Vazir';
+      font-size: 16px;
+      background-color: #f5f5f5;
+  }
+  
+  @font-face {
+      font-family: 'Vazir';
+      src: url('https://saadco.co/Vazir.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  #hoonamNav {
+      background-color: #2A4B7C;
+  }
+  
+  #hoonamSecondNav a {
+      color: black;
+  }
+  
+  #sadCoPic {
+      background-image: url('https://saadco.co/img/9.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 600px;
+      width: auto;
+  }
+  
+  #sadCoPicBaseBg {
+      background-color: #2A4B7C;
+      opacity: 0.7;
+  }
+  
+  #sadCoPic p {
+      color: #000;
+      opacity: 1;
+      text-align: center;
+      font-size: 18px;
+  }
+  
+  .carousel-caption {
+      opacity: 0.7;
+  }
+  
+  #hoonamInfoCircle {
+      border-radius: 50%;
+      width: 40%;
+      height: 500px;
+      background-color: #2A4B7C;
+  }
+  
+  .menuBtnSetBackground {
+      background-color: #2A4B7C;
+      text-align: center;
+      color: #DBFF33;
+  }
+  
+  #hoonamBackMenu {
+      background-color: #2A4B7C;
+      text-align: center;
+      color: #DBFF33;
+      font-size: 24px;
+      height:65rem;
+  }
+  
+  #hoonamMobileInfoCircle {
+      width: 300px;
+      height: auto;
+      background-color: #DDD;
+      opacity: 0.7;
+      transform: rotateY('180deg');
+  }
+  
+  .linesOfCircle {
+      height: 1%;
+      border-radius: 1%;
+      width: 12.5%;
+      background-color: #CC3399;
+  }
+  
+  #firstLeftLine {
+      position: absolute;
+      top: 20%;
+      left: 20.5%;
+      transform: rotateZ(30deg);
+  }
+  
+  #secondLeftLine {
+      width: 20%;
+      position: absolute;
+      top: 65%;
+      left: 11.5%;
+      transform: rotateZ(160deg);
+  }
+  
+  #firstRightLine {
+      position: absolute;
+      top: 20%;
+      right: 20.5%;
+      transform: rotateZ(-30deg);
+  }
+  
+  #secondRightLine {
+      width: 20%;
+      position: absolute;
+      top: 65%;
+      right: 11.8%;
+      transform: rotateZ(30deg);
+  }
+  
+  .hoonamChildernCircle {
+      width: 16%;
+      height: 35%;
+      background-color: #DDD;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0.7;
+  }
+  
+  #hoonamDownCircle {
+      top: 75%;
+      left: 42%;
+  }
+  
+  #hoonamUpCircle {
+      bottom: 80%;
+      left: 42%;
+  }
+  
+  #firstLeftCircle {
+      top: -30px;
+      left: 180px;
+  }
+  
+  #secondLeftCircle {
+      top: 300px;
+      left: 70px;
+  }
+  
+  #firstRightCircle {
+      top: -15px;
+      right: 180px;
+  }
+  
+  #secondRightCircle {
+      top: 340px;
+      right: 70px;
+  }
+  
+  #hoonamFooter {
+      background-color: #2A4B7C;
+      line-height: 10px;
+      font-size:14px;
+  }
+  
+  .hoonamFooterLink {
+      color: #900C3F;
+  }
+  
+  #IranMap {
+      direction: rtl;
+      display: block;
+      font-family: Tahoma;
+      font-size: 11px;
+      left: 0;
+      margin: 50px auto;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      top: 78px;
+      width: 70%;
+  }
+  
+  #IranMap .show-title {
+      display: none;
+      position: absolute;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      margin: 0!important;
+      padding: 0 5px;
+      text-align: center;
+      line-height: 26px;
+      min-width: 120px;
+      font-family: IRANSans
+  }
+  
+  #socialPart {
+      width: 300px;
+      height: 300px;
+  }
+  
+  #IranMap .map {
+      width: 100%;
+      height: 20%;
+      text-align: center;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none
+  }
+  
+  #IranMap .map svg {
+      height: auto;
+      max-height: 26%;
+      max-width: 33%;
+      width: 500px;
+      height: 40%;
+  }
+  
+  #IranMap .map .border path,
+  #IranMap .map .island path {
+      fill: #d1d1d1
+  }
+  
+  #IranMap .map .province path {
+      fill: #ebebeb
+  }
+  
+  #IranMap .map .sea path,
+  #IranMap .map .lake path {
+      fill: #d1d1d1
+  }
+  
+  #IranMap .map .province path:hover,
+  #IranMap .map .island path:hover,
+  #IranMap .map .province path.hover,
+  #IranMap .map .island path.hover {
+      fill: #da5b38!important;
+      cursor: pointer
+  }
+  
+  #IranMap .list {
+      display: block;
+      float: right;
+      width: 50%
+  }
+  
+  #IranMap .list ul {
+      padding: 0
+  }
+  
+  #IranMap .list>ul {
+      margin-left: 10px
+  }
+  
+  #IranMap .list li {
+      list-style: none
+  }
+  
+  #IranMap .list span {
+      background: #242424;
+      color: #ecf0f1;
+      display: block;
+      margin: 0 2px;
+      padding: 0 8px;
+      line-height: 26px;
+      margin-top: 10px;
+      margin-bottom: 2px
+  }
+  
+  #IranMap .list li ul li {
+      display: block;
+      float: right;
+      width: 33.33333333333333%
+  }
+  
+  #IranMap .list li ul li a {
+      background: #34495e;
+      color: #ecf0f1;
+      display: block;
+      padding: 0 8px;
+      line-height: 26px;
+      margin: 2px 2px;
+      text-decoration: none
+  }
+  
+  #IranMap .list li ul li a:hover,
+  #IranMap .list li ul li a.hover {
+      background: #c33a2c
+  }
+  
+  #IranMap .list ul:before,
+  #IranMap .list ul:after {
+      display: table;
+      content: " "
+  }
+  
+  #IranMap .list ul,
+  #IranMap .list ul:after {
+      clear: both
+  }
+  
+  #IranMap .city {
+      clear: both;
+      padding: 10px 0
+  }
+  
+  @media(max-width:930px) {
+      #IranMap .list {
+          width: 50%;
+          height: 50%
+      }
+  }
+  
+  @media(max-width:745px) {
+      #IranMap .list li ul li {
+          width: 50%;
+          height: 50%
+      }
+  }
+  
+  @media(max-width:515px) {
+      #IranMap .list,
+      #IranMap .map {
+          width: 100%;
+          height: 50%
+      }
+      #IranMap .list li ul li {
+          width: 33.33333333333333%;
+          height: 50%
+      }
+      #IranMap .list li ul li a {
+          font-size: 10px!important;
+          height: 50%
+      }
+  }
+  
+  @media(max-width:515px) {
+      #IranMap .list li ul li {
+          width: 50%;
+          height: 50%
+      }
+  }
+  
+  @media(max-width:250px) {
+      #IranMap .list li ul li {
+          width: 100%;
+          height: 50%
+      }
+  }
+  
+  .hoonamSiteLogo {
+      position: relative;
+      width: 30%;
+      height: 20%;
+      background-color: red;
+      border-radius: 20px;
+      left: 45%;
+  }
+  
+  #hoonamSiteLogo1 {
+      top: -50%;
+      display: block;
+  }
+  
+  #hoonamEndPic {
+      background-color: #581845;
+  }
+  
+  .logotype {
+      background-image: url('https://saadco.co/img/saadco.png');
+      width: 8.9rem;
+      height: 7rem;
+      background-size:cover;
+  }
+  
+  #hoonamOurSiteLogo {
+      background-image: url('https://saadco.co/img/mazandgaz.png');
+      
+  }
+  
+  #navBtn {
+      background-image: url('https://saadco.co/img/navBtn.png');
+      background-size: cover;
+  }
+  
+  .productsLI {
+      opacity: 0.6;
+  }
+  
+  .hoonamDoubleSlideImg {
+      height: 60%;
+  }
+  
+  .hoonamDoubleSlideFirstImgPrevBtn {}
+  
+  .hoonamDoubleSlideFirstImgNextBtn {
+  }
+  
+  .hoonamDoubleSlideSecondPart {
+      height: 50%;
+      color: #581845;
+  }
+  
+  .hoonamDoubleSlideRightImg {
+      height: 41%;
+  }
+  
+  .sidebar-sticky {
+      position: fixed;
+      top: 45%;
+      width: 2.5rem;
+      right: 0;
+  }
+  
+  #topSidebar-sticky {
+
+  }
+  
+  #topSidebar-sticky i {
+      border-radius: 15%;
+  }
+  
+  .instagram {
+      background-image: url('https://saadco.co/img/instagram.png');
+      background-size: cover;
+      height: 40px;
+      width: 40px;
+  }
+  
+  .linkedIn {
+      background-image: url('https://saadco.co/img/linkedin.png');
+      background-size: cover;
+      height: 40px;
+      width: 40px;
+  }
+  
+  .telegram {
+      background-image: url('https://saadco.co/img/telegram.png');
+      background-size: cover;
+      height: 40px;
+      width: 40px;
+  }
+  
+  .hoonamFooterLogos {
+      width: 9.5rem;
+      height: 7rem;
+  }
+#hoonamFooter a
+{
+    color:yellowgreen;
+}
+header {
+    width: 100%;
+    position: relative;
+    z-index: 1
+}
+
+header .top-bar {
+    height: 50px;
+    background-color: #0176b9
+}
+
+header .top-bar .lng {
+    float: left;
+    height: 45px;
+    margin-left:5px;
+}
+
+header .top-bar .lng a {
+    float: left;
+    width: 40px;
+    height: 100%;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+header .top-bar .lng .active {
+    color: #dcbd10
+}
+
+header .top-bar .search-area {
+    width: 95px;
+    float: left;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s
+}
+
+header .top-bar .search-area i {
+    color: #dcbd10;
+    font-size: 16px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    cursor: pointer
+}
+
+header .top-bar .search-area .txt {
+    color: #fff;
+    min-width: 0;
+    font-size: 14px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0 10px;
+    background-color: transparent;
+    display: flex;
+    align-items: center
+}
+
+header .top-bar .search-area .txt:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+header .head-content {
+    background-color: #eeeff1
+}
+
+header .head-content .main {
+    height: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: start;
+    -webkit-box-align: end;
+    -ms-flex-align: start;
+    align-items:center;
+    position: relative
+}
+
+header .head-content .main .site-brand {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1
+}
+
+header .head-content .main .site-brand .site-logo {
+    width: 8.9rem;
+    height: 8.4rem;
+    border: 15px solid #ecedef;
+    background-color: #ecedef;
+    border-radius: 50%;
+    position: absolute;
+    right: 5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+header .head-content .main .site-brand .site-name {
+    position: absolute;
+    height: 100%;
+    width: 170px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font: 39px IranNastaliq;
+    color: #0f3568;
+    text-align: left;
+    padding-top: 13px
+}
+
+header .head-content .main nav {
+    width: 810px;
+    height: 60px
+}
+
+header .head-content .main nav .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    padding: 3px
+}
+
+header .head-content .main nav .hamburger svg {
+    width: 100%;
+    height: 100%
+}
+
+header .head-content .main nav .hamburger svg .st0 {
+    fill: none;
+    stroke: #333;
+    stroke-width: 3;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 35px 110px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+
+header .head-content .main nav .hamburger svg .st1 {
+    fill: none;
+    stroke: #333;
+    stroke-width: 3;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 36px 20px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+
+header .head-content .main nav .main-menu {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    margin-right: -2%;
+
+}
+
+header .head-content .main nav .main-menu > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+header .head-content .main nav .main-menu > li > a {
+    color: #252323;
+    font-size: 15px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center
+}
+
+header .head-content .main nav .main-menu > li > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    border-bottom: 3px solid #0176b9;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s
+}
+
+header .head-content .main nav .main-menu > li i {
+    color: #557ccc;
+    font-size: 16px;
+    padding-top: 3px
+}
+
+header .head-content .main nav .main-menu > li:last-child {
+    margin-left: 0
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1, header .head-content .main nav .main-menu > li .sub-menu-l2 {
+    background-color: #0176b9;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    white-space: nowrap;
+    min-width: 130px;
+    display: none;
+    padding-top: 15px
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1 li, header .head-content .main nav .main-menu > li .sub-menu-l2 li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1 li a, header .head-content .main nav .main-menu > li .sub-menu-l2 li a {
+    padding: 0 30px;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-align: center
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1 li i, header .head-content .main nav .main-menu > li .sub-menu-l2 li i {
+    position: absolute;
+    left: 3px;
+    color: #fff;
+    top: 4px
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1 li .sub-menu-l2, header .head-content .main nav .main-menu > li .sub-menu-l2 li .sub-menu-l2 {
+    top: -15px;
+    right: 100%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1 li .sub-menu-l2::before, header .head-content .main nav .main-menu > li .sub-menu-l2 li .sub-menu-l2::before {
+    display: none
+}
+
+header .head-content .main nav .main-menu > li .sub-menu-l1::before, header .head-content .main nav .main-menu > li .sub-menu-l2::before {
+    content: '';
+    position: absolute;
+    border: 10px solid;
+    border-color: #eeeff1 transparent transparent transparent;
+    right: 50%;
+    top: 0;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%)
+}
+
+header .head-content .main nav.close .hamburger svg .st0 {
+    stroke-dashoffset: -92px;
+    stroke-dasharray: 43px 110px
+}
+
+header .head-content .main nav.close .hamburger svg .st1 {
+    stroke-dashoffset: -16px;
+    stroke-dasharray: 0 20px
+}
+
+#navbar-content ul {
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DC68AE;
+    opacity:1;
+}
+#navbar-content a
+{
+    color:black;
+}

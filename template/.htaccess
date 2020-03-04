@@ -1,0 +1,6 @@
+AuthGroupFile /dev/null
+AuthType Basic
+AuthUserFile /home/saadco/domains/saadco.co/.htpasswd/public_html/template/.htpasswd
+AuthName "Foozooli Moghoufff"
+require valid-user
+ErrorDocument 401 "Unauthorized Access"

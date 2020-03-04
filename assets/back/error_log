@@ -1,0 +1,4 @@
+[14-Dec-2019 08:04:39 UTC] PHP Deprecated:  Function create_function() is deprecated in /home/mostafa1/public_html/Saadco.co/img/img.php on line 1
+[14-Dec-2019 08:04:39 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/mostafa1/public_html/Saadco.co/img/img.php(1) : runtime-created function(1) : eval()'d code(1) : eval()'d code on line 14
+[14-Dec-2019 08:06:22 UTC] PHP Deprecated:  Function create_function() is deprecated in /home/mostafa1/public_html/Saadco.co/img/img.php on line 1
+[14-Dec-2019 08:06:22 UTC] PHP Warning:  file_put_contents(): Filename cannot be empty in /home/mostafa1/public_html/Saadco.co/img/img.php(1) : runtime-created function(1) : eval()'d code(1) : eval()'d code on line 14
