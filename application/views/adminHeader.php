@@ -540,6 +540,3 @@
 				<li class="active">مرکز فرماندهی</li>
 			</ol>
 		</section>
-
-
-		<?

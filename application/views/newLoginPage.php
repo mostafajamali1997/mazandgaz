@@ -24,10 +24,8 @@ $captcha_data = array(
 		'grid' => array(255, 40, 40)
 	)
 );
-var_dump($captcha_data);
 $captchaOfPage = create_captcha($captcha_data);
-var_dump($captchaOfPage);
-exit();
+
 $captchaDatabaseData = array(
 	'captcha_time' => time(),
 	'ip_address' => $this->input->ip_address(),

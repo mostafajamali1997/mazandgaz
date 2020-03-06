@@ -14,17 +14,17 @@
 				<!-- /.box-header -->
 				<div class="box-body">
                 <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelectProducts">
-                        <option selected>انتخاب کنید</option>
+                <?php echo form_open('UserController/addWarranty/');?>
+
+                    <select name="product_id" class="custom-select" id="inputGroupSelectProducts">
+                        <option selected  >انتخاب کنید</option>
                         <?php
                         foreach($products as $product)
                         {
-                            echo '<option value="'.$product['id'].'">'.$product['title'].'</option>';
+                            echo '<option  value="'.$product['id'].'">'.$product['title'].'</option>';
                         }
                         ?>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                      
                     </select>
                     
                     </div>
@@ -37,29 +37,30 @@
                     <label class="form-check-label" for="inlineCheckbox2">مشتری عضو سامانه نیست</label>
                     </div>
                     <div class="ourForm">
-                        
-                    <form>
+                        <div class="text-danger">
+                    <?php echo validation_errors();?>
+                    </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                             <label for="inputFname">نام</label>
-                            <input type="text" class="form-control" id="inputFname" placeholder="نام">
+                            <input type="text" class="form-control" name="inputFname" id="inputFname" placeholder="نام">
                             </div>
                             <div class="form-group col-md-4">
                             <label for="inputLname">نام خانوادگی</label>
-                            <input type="text" class="form-control" id="inputLname" placeholder="نام خانوادگی">
+                            <input type="text" class="form-control" name="inputLname"  id="inputLname" placeholder="نام خانوادگی">
                             </div>
                             <div class="form-group col-md-4">
                             <label for="inputPhone">شماره تماس</label>
-                            <input type="tel" class="form-control" id="inputPhone" placeholder="شماره تماس">
+                            <input type="tel" class="form-control" name="inputPhone"  id="inputPhone" placeholder="شماره تماس">
                             </div>
                         </div>
                         <div class="form-group col-md-8">
                             <label for="inputAddress">آدرس</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="استان،شهر،خیابان،کوچه،پلاک">
+                            <input type="text" class="form-control" name="inputAddress"  id="inputAddress" placeholder="استان،شهر،خیابان،کوچه،پلاک">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPostalCode">کدپستی</label>
-                            <input type="text" class="form-control" id="inputPostalCode" placeholder="کد پستی">
+                            <input type="text" class="form-control" id="inputPostalCode" name="inputPostalCode"  placeholder="کد پستی">
                         </div>
                         
                         <div class="form-group">
@@ -70,8 +71,9 @@
                             </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
-                        </form>
+                        <button type="submit" class="btn btn-primary">صدور</button>
+                        <?php echo form_close();?>
+
 
                     </div>
 				</div>

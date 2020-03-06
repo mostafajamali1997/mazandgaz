@@ -82,14 +82,17 @@ class Warranty_Model extends CI_Model
 
 		return $query->result_array();
 	}
-	public function getDedicateProductsForServiceWorker($serviceworker_id)
+	public function getDedicateProductsForServiceWorker($serviceworker_username)
 	{
 		$query=$this->db->select('title,id');
-		$query=$this->db->get_where('financial_product',array('serviceworker_id'=>$serviceworker_id));
-		return $query->result_array();
+		$query=$this->db->get_where('financial_product',array('serviceworker_username'=>$serviceworker_username));
+ 		return $query->result_array();
 	}
 	public function addWarranty()
 	{
+		$data=array($this->input->post());
+		var_dump($data);
+		exit();
 		$this->db->insert('warranty', $data);
 		return $this->db->insert_id();
 	}

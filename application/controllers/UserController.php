@@ -354,6 +354,8 @@ class UserController extends MY_Controller
 		{
 			$this->load->model("Warranty_Model");
 			$res = $this->Warranty_Model->getAllWarranty();
+			$usersSession=$this->session->userdata('usersSession');
+			$serviceWorkersProducts=$this->Warranty_Model->getDedicateProductsForServiceWorker($usersSession['username']);
 			//var_dump($res);
 			//exit();
 			$data = array(
@@ -368,6 +370,7 @@ class UserController extends MY_Controller
 	}
 	public function addWarrantyForm()
 	{
+		$this->load->model('Warranty_Model');
 		if ($this->doesUserLoggedInWithSessionOrCookies())//Az My Controller to folder core
 		{
 			//$res = $this->Warranty_Model->getAllWarranty();
@@ -375,10 +378,64 @@ class UserController extends MY_Controller
 				//'warrantyAndProductsTitle' => $res,
 				'pageTitle' => 'صدور گارانتی جدید'
 			);
+			$usersSession=$this->session->userdata('usersSession');
+			$data['products']=$this->Warranty_Model->getDedicateProductsForServiceWorker($usersSession['username']);
 			$templateData['pageTitle'] = 'صدور گارانتی جدید';
 			$this->load->view('adminHeader', $templateData);
 			$this->load->view('adminWarrantyAdd', $data);
 			$this->load->view('adminFooter');
+		}
+	}
+	public function addWarranty()//ehsas dobare kari daram
+	{
+		$this->load->model('Warranty_Model');
+		if ($this->doesUserLoggedInWithSessionOrCookies())//Az My Controller to folder core
+		{
+			$usersSession=$this->session->userdata('usersSession');
+			$serviceWorkersProducts=$this->Warranty_Model->getDedicateProductsForServiceWorker($usersSession['username']);//forvalidation
+			$count=0;
+			$productId=array();
+			foreach($serviceWorkersProducts as $product)
+			{
+				$productsId[$count]=$product['id'];
+				$count++;
+			}
+
+			$this->load->library('form_validation');
+			$validation_rules=array(
+				array('field'=>'product_id','label'=>'نوع محصول','rules'=>'trim|required|is_natural|in_list['.implode(",",$productsId).']' ),
+				array('field'=>'inputFname','label'=>'نام','rules'=>'trim|required|alpha'),
+				array('field'=>'inputLname','label'=>'نام خانوادگی','rules'=>'trim|required|alpha'),	
+				array('field'=>'inputPhone','label'=>'شماره تماس','rules'=>'trim|required|is_natural'),	
+				array('field'=>'inputAddress','label'=>'آدرس','rules'=>'trim|required|alpha_numeric_spaces'),
+				array('field'=>'inputPostalCode','label'=>'کدپستی','rules'=>'trim|required|is_natural'),	
+
+
+			);
+			$this->form_validation->set_rules($validation_rules);
+			if($this->form_validation->run() == FALSE)
+			{
+				$usersSession=$this->session->userdata('usersSession');
+				$data['products']=$this->Warranty_Model->getDedicateProductsForServiceWorker($usersSession['username']);//engar dobare kari kardm
+				$templateData=array('pageTitle'=>'خطا|صدورگارانتی جدید');
+				$this->load->view('adminHeader', $templateData);
+				$this->load->view('adminWarrantyAdd', $data);
+				$this->load->view('adminFooter');
+			}
+			else
+			$this->Warranty_Model->addWarranty();
+			/*$res = $this->Warranty_Model->getAllWarranty();
+			$data = array(
+				//'warrantyAndProductsTitle' => $res,
+				'pageTitle' => 'صدور گارانتی جدید'
+			);
+			$usersSession=$this->session->userdata('usersSession');
+			$data['products']=$this->Warranty_Model->getDedicateProductsForServiceWorker($usersSession['username']);
+			$templateData['pageTitle'] = 'صدور گارانتی جدید';
+			$this->load->view('adminHeader', $templateData);
+			$this->load->view('adminWarrantyAdd', $data);
+			$this->load->view('adminFooter');
+			*/
 		}
 	}
 	public function showImage()
