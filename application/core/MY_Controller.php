@@ -50,7 +50,7 @@ class MY_Controller extends CI_Controller
 		$captcha_data = array(
 			'word' => rand(12345, 50000),
 			'img_path' => './captcha/',
-			'img_url' => 'https://saadco.co/webapp/captcha/',
+			'img_url' => base_url('captcha'),
 			'img_width' => '100',
 			'img_height' => 30,
 			'expiration' => 7200,

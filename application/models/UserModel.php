@@ -106,7 +106,7 @@ class UserModel extends CI_Model
 				'name' => 'loggingCookieStatus',
 				'value' => 'TRUE',
 				'expire' => time() + (86400 * 7),//86400=1day(ilamannnnnnnnnn)
-				'domain' => 'saadco.co',
+				'domain' => base_url(),
 				'path' => '/',
 				'secure' => 'TRUE'//Just SSL
 

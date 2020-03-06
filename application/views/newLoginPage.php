@@ -7,7 +7,7 @@ $form_open_attributes = array('class' => 'form_group', 'id' => 'login_form');//F
 $captcha_data = array(
 	'word' => rand(12345, 50000),
 	'img_path' => './captcha/',
-	'img_url' => base_url('captcha'),
+	'img_url' => base_url('captcha/'),
 	'img_width' => '130',
 	'img_height' => 30,
 	'expiration' => 7200,
@@ -24,7 +24,10 @@ $captcha_data = array(
 		'grid' => array(255, 40, 40)
 	)
 );
+var_dump($captcha_data);
 $captchaOfPage = create_captcha($captcha_data);
+var_dump($captchaOfPage);
+exit();
 $captchaDatabaseData = array(
 	'captcha_time' => time(),
 	'ip_address' => $this->input->ip_address(),
@@ -33,6 +36,7 @@ $captchaDatabaseData = array(
 );
 $captcha_insert_query = $this->db->insert_string('captcha', $captchaDatabaseData);
 $this->db->query($captcha_insert_query);
+
 ////////////////////////////////////UI////////////////////////////////
 /// ?>
 <!DOCTYPE html>
